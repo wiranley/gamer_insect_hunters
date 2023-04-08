@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo - Mata Mosquito</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jogo.js"></script>
+  </head>
+  <body onresize="adjustGameStageSize()">
+
+    <div class="dashboard">
+
+        <div class="life">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="" srcset="">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="" srcset="">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="" srcset="">
+        </div>
+        <div class="stopwatch">Tempo restante: <span id="stopwatch"></span></div>
+    </div>
+
+
+
+
+</body>
+  <script>
+    document.getElementById('stopwatch').innerHTML = time;
+    createElement = setInterval(() => {
+        positionRandom(); 
+    }, createTime);
+
+  </script>
+</html>
